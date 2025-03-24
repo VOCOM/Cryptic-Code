@@ -1,7 +1,7 @@
 ﻿open System
 open Discord.WebSocket
 
-open coreClient
+open CoreClient
 
 // Feature: Audio Scrubber
 // 1. Check for prefix

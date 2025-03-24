@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="core.fs" />
+    <Compile Include="CoreClient.fs" />
     <EmbeddedResource Include=".env" />
     <Compile Include="Program.fs" />
   </ItemGroup>

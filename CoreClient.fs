@@ -1,4 +1,4 @@
-﻿module coreClient
+﻿module CoreClient
 
 open System
 open System.IO
