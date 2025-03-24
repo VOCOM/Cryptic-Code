@@ -26,17 +26,17 @@ let private messageCallback(msg: SocketMessage): Task =
   }
   
 let private token: string =
-  let index = aContent.IndexOf("discord-token")
-  if index >= 0 then
-    let startIndex = aContent.IndexOf("\"") + 1
-    let endIndex = aContent.IndexOf("\"", startIndex)
-    aContent.Substring(startIndex, endIndex - startIndex)
-  else
-    String.Empty
+    let index = aContent.IndexOf("discord-token")
+    if index >= 0 then
+      let startIndex = aContent.IndexOf("\"") + 1
+      let endIndex = aContent.IndexOf("\"", startIndex)
+      aContent.Substring(startIndex, endIndex - startIndex)
+    else
+      String.Empty
 let private config: DiscordSocketConfig = 
-  let config = DiscordSocketConfig()
-  config.GatewayIntents <- config.GatewayIntents ||| GatewayIntents.MessageContent
-  config
+    let config = DiscordSocketConfig()
+    config.GatewayIntents <- config.GatewayIntents ||| GatewayIntents.MessageContent
+    config
 
 let StartClient(): DiscordSocketClient =
   let client:DiscordSocketClient = new DiscordSocketClient(config)
@@ -45,7 +45,7 @@ let StartClient(): DiscordSocketClient =
   client.add_Connected(new Func<Task>(connectCallback))
   client.add_Ready(new Func<Task>(readyCallback))
   client.add_MessageReceived(new Func<SocketMessage, Task>(messageCallback))
-
+  
   // Initialization sequence
   let tasks = [
     client.LoginAsync(TokenType.Bot,token);
