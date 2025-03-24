@@ -1,7 +1,7 @@
 ﻿open System
 open Discord.WebSocket
 
-open coreClient
+open CoreClient
 
 // Feature: Audio Scrubber
 // 1. Check for prefix
@@ -15,7 +15,7 @@ open coreClient
 [<EntryPoint>]
 let main(argv: string array) =
   let client: DiscordSocketClient = StartClient()
-
+  
   let mutable loop: bool = true
   while loop do
     if Console.ReadLine() = "q" then
