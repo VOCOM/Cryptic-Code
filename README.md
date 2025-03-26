@@ -2,8 +2,9 @@
 Discord Bot built on the .NET framework using C# and F#
 
 # Features
-| Feature |
-| :------ |
+| Feature        |
+| :------------- |
+| YouTube Search |
 
 # Todo
 1. Audio Scrubber<br/>
