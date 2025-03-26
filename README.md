@@ -1,5 +1,5 @@
 # Cryptic Code
-Discord Bot built on the .NET framework using F#
+Discord Bot built on the .NET framework using C# and F#
 
 # Features
 | Feature |
